@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Cydia</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <style>
+      .list-block ul:after {
+        height: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <!-- Navbar inner for Index page-->
+          <!-- <div data-page="index" class="navbar-inner">
+            <div class="center sliding">Awesome App</div>
+            <div class="right">
+              <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+            </div>
+          </div> -->
+          <!-- Navbar inner for About page-->
+          <div data-page="about" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">About Us</div>
+          </div>
+          <!-- Navbar inner for Services page-->
+          <div data-page="services" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Services</div>
+          </div>
+          <!-- Navbar inner for Form page-->
+          <div data-page="form" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Form</div>
+          </div>
+          <!-- Navbar inner for windows -->
+          <div data-page="mwindows" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Windows</div>
+          </div>
+          <div data-page="bubble" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Pop Circle Bubble</div>
+          </div>
+          <div data-page="animator" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Man Animator</div>
+          </div>
+          <div data-page="goldring" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Golden Rings</div>
+          </div>
+          <div data-page="blueeyes" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Blue Eyes</div>
+          </div>
+          <div data-page="colorWall" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Color Wall</div>
+          </div>
+          <div data-page="Highlighter" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Highlighter</div>
+          </div>
+          <div data-page="blueAngel" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Blue Angel</div>
+          </div>
+          <div data-page="Gray" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Gray</div>
+          </div>
+          <div data-page="laughingMan" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Laughing Man</div>
+          </div>
+          <div data-page="nightMirror" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Night Mirror</div>
+          </div>
+          <div data-page="Rotate" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Rotate</div>
+          </div>
+          <div data-page="movingClock" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Moving Clock</div>
+          </div>
+          <div data-page="Notebook" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Notebook</div>
+          </div>
+          <div data-page="Sliper" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Sliper</div>
+          </div>
+          <div data-page="Slizing" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Slizing</div>
+          </div>
+          <div data-page="Spin" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Spin</div>
+          </div>
+          <div data-page="seaWaves" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Sea Waves</div>
+          </div>
+          <div data-page="orangeiPhone6" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Orange iPhone6</div>
+          </div>
+          <div data-page="lightExpress5" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Light Express5</div>
+          </div>
+
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <!-- <div class="content-block-title">What about simple navigation?</div> -->
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul>
+                  <li><a href="#mwindows" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon windows"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Windows</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#bubble" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon pcbubble"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Pop Circle Bubble</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#animator" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon manimator"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Man Animator</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#goldring" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon gring"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Golden Rings</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#blueeyes" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon beyes"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Blue Eyes</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#colorWall" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon cwall"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Color Wall</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#Highlighter" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon highlighter"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Highlighter</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#blueAngel" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon bangel"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Blue Angel</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#Gray" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon gray"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Gray</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#laughingMan" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon lman"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Laughing Man</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#nightMirror" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon mirror"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Night Mirror</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#Rotate" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon rotate"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Rotate</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#movingClock" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon mclock"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Moving Clock</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#Notebook" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon notebook"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Notebook</div>
+                        </div>
+                      </div></a></li>
+                   <li><a href="#Sliper" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon sliper"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Sliper</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#Slizing" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon slizing"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Slizing</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#Spin" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon spin"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Spin</div>
+                        </div>
+                      </div></a></li>
+                   <li><a href="#seaWaves" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon seawaves"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Sea Waves</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#orangeiPhone6" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon orangeiphone"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Orange iPhone6</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#lightExpress5" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon lexpress"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Light Express5 (Only for iPhone5)</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- About Page-->
+          <div data-page="about" class="page cached">
+            <div class="page-content">
+              <div class="content-block">
+                <p>You may go <a href="#" class="back">back</a> or load <a href="#services">Services</a> page.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor.    </p>
+              </div>
+            </div>
+          </div>    
+          <!-- Windows page-->
+          <div data-page="mwindows" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                   <!-- <li><a href="#mwindows" class="item-link">
+                      <div class="item-content"><div class="item-media"><i class="icon windows"></i></div>
+                        <div class="item-inner"> 
+                          <div class="item-title">Windows</div>
+                        </div>
+                      </div></a></li> -->
+                    <li>
+                           <div class="item-content">
+                              <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon windowsmax"></i></div>
+                              <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                                 <div class="item-title label" style="width:50%;">Windows Mobile<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                 <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                              </div>
+                           </div>
+                        </li>
+                </ul>
+                <!-- <ul style="background: #EEFFEF; border-top: 0px solid;">
+                    <li>
+                           <div class="item-content">
+                              <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon windowsmax"></i></div>
+                              <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                                 <div class="item-title label" style="width:50%;">Airplane Mode<<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                 <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                              </div>
+                           </div>
+                        </li>
+                </ul> -->
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/win.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+              <!-- <div class="content-block">
+                <p>You may go <a href="#" class="back">back</a> or load <a href="#services">Services</a> page.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti </p>
+              </div> -->
+            </div>
+          </div>
+          <!-- Pop Circle Bubble page-->
+          <div data-page="bubble" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Bubble"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Pop Circle Bubble<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/pop1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/pop2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Man Animator page-->
+          <div data-page="animator" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon MAnimator"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Man Animator<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/man1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/man2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+               <div class="content-block-inner">
+                  <div class="content-block-inner">
+                     <img src="images/app/man3.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+            </div>
+          </div>
+          <!-- Golden Rings page-->
+          <div data-page="goldring" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon GoldenRings"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Golden Rings<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/grings.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/grings2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+               <div class="content-block-inner">
+                  <div class="content-block-inner">
+                     <img src="images/app/grings3.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+            </div>
+          </div>
+          <!-- Blue Eyes page-->
+          <div data-page="blueeyes" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon BlueEyes"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Blue Eyes<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+               <div class="content-block-inner">
+                  <img src="images/app/blue_eye.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/blue_eye1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Color Wall page-->
+          <div data-page="colorWall" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon ColorWall"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Color Wall<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Cwall1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Cwall2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Highlighter page-->
+          <div data-page="Highlighter" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Highlighters"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Highlighter<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Highlighter.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Highlighter2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Blue Angel page-->
+          <div data-page="blueAngel" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon BlueAngel"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Blue Angel<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Blue_angel.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Blue_angel2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Gray page-->
+          <div data-page="Gray" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Grays"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Gray<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/gray1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/gray2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+               <div class="content-block-inner">
+                  <div class="content-block-inner">
+                     <img src="images/app/gray3.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/gray4.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Laughing Man page-->
+          <div data-page="laughingMan" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon LaughingMan"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Laughing Man<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Laughing_man1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Laughing_man2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+               <div class="content-block-inner">
+                  <div class="content-block-inner">
+                     <img src="images/app/Laughing_man3.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+            </div>
+          </div>
+          <!-- Night Mirror page-->
+          <div data-page="nightMirror" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon NightMirrors"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Night Mirror<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Mirror.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Mirror2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+               <div class="content-block-inner">
+                  <div class="content-block-inner">
+                     <img src="images/app/Mirror3.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+            </div>
+          </div>
+          <!-- Rotate page-->
+          <div data-page="Rotate" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Rotates"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Rotate<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/rotate.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/rotate2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Moving Clock page-->
+          <div data-page="movingClock" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon MovingClock"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Moving Clock<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Mclock.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Mclock2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+               <div class="content-block-inner">
+                  <div class="content-block-inner">
+                     <img src="images/app/Mclock3.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+            </div>
+          </div>
+          <!-- Notebook page-->
+          <div data-page="Notebook" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Notebooks"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Notebook<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Nbook.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Nbook2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Sliper page-->
+          <div data-page="Sliper" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Slipers"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Sliper<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Slip1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Slip2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Slizing page-->
+          <div data-page="Slizing" class="page cached">    
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Slizings"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Slizing<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Slizing1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Slizing2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+          <!-- Spin page-->
+          <div data-page="Spin" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon Spins"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Spin<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Spin1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Spin2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+               <div class="content-block-inner">
+                  <div class="content-block-inner">
+                     <img src="images/app/Spin3.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+            </div>
+          </div>
+          <!-- Sea Waves page-->
+          <div data-page="seaWaves" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon SeaWaves"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Sea Waves<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Sea1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+            </div>
+          </div>
+          <!-- Orange iPhone6 page-->
+          <div data-page="orangeiPhone6" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon OrangeiPhone"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Orange iPhone6<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Orange1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/Orange2.png" style="margin-left: 10%; width:80%; border-radius: 5%;"> 
+               </div>
+            </div>
+          </div>
+          <!-- Light Express5 page-->
+          <div data-page="lightExpress5" class="page cached">
+            <div class="page-content">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><i class="icon LightExpress"></i></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Light Express5<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/Light_Express.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <!-- <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
