@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+      <meta name="mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <title>Cydia</title>
+      <style>
+   .contact-header {
+         display: -webkit-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         display: flex;
+         }
+         .modal-inner {
+         background: #000000;
+         color: #FFFFFF;
+         padding: 0px;
+         margin-top: -150px;
+         border-radius: 7px 7px 0 0;
+         position: relative;
+         } 
+         .normal-p{
+         padding: 0px;
+         margin: 0px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         .normal-p2{
+         padding: 0px;
+         margin: 0px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         /* .....................   iPhone 5s portrait  .........................  */
+         @media only screen and (max-width: 373px) and (orientation : portrait){
+         .modal-inner {
+         background: #000000;
+         color: #FFFFFF;
+         margin-left: -75px;
+         margin-top: -1%;
+         padding: 0px;
+         width: 320px;
+         height: 570px;
+         border-radius: 0 0 0 0;
+         position: relative;
+         }
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 200px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -20%;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:6%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }
+         }
+        /* .....................   iPhone 5s landscape  .........................  */
+         @media only screen and (max-width: 660px) and (orientation : landscape) {
+         .modal-inner{
+         background: #000000;
+         color: #FFFFFF;
+         padding: 0px;
+         margin-top: -1%;
+         margin-left: -199px;
+         border-radius: 7px 7px 0 0;
+         position: relative;
+         width: 568px;
+         height:325px;
+         } 
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 25px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -2%;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:10%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }
+         }
+    
+         
+         /* .....................   iPhone 6, 6s, 7, 8 portrait  .........................  */
+         @media only screen and (min-width: 374px) and (max-width: 412px) and (max-height: 670px) and (orientation : portrait){
+         .modal-inner {
+         background: #000000;
+         color: #FFFFFF;
+         margin-left: -105px;
+         margin-top: -1%;
+         padding: 0px;
+         width: 380px;
+         height: 670px;
+         border-radius: 0 0 0 0;
+         position: relative;
+         }
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 320px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -20%;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:6%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }
+         }
+
+         /* .....................   iPhone x portrait  .........................  */
+         @media only screen and (min-width: 374px) and (max-width: 412px) and (min-height: 672px) and (max-height: 820px) and (orientation : portrait){
+         .modal-inner {
+         background: #000000;
+         color: #FFFFFF;
+         margin-left: -102px;
+         margin-top: -1%;
+         padding: 0px;
+         width: 375px;
+         height: 800px;
+         border-radius: 0 0 0 0;
+         position: relative;
+         }
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 440px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -20%;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:5%; 
+         border: 2px solid white; 
+         padding-top: 2px; 
+         padding-bottom:0px; 
+         font-size:172%; 
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+      
+         }
+         }
+         /*.................iPhone 6, 6s,7,8............ (orientation: landscape) {*/
+         @media only screen and (min-width: 662px) and (max-width: 730px) and (orientation : landscape){
+        .modal-inner{
+         background: #000000;
+         color: #FFFFFF;
+         padding: 0px;
+         margin-top: -1%;
+         margin-left: -250px;
+         border-radius: 7px 7px 0 0;
+         position: relative;
+         width: 670px;
+         height:380px;
+         } 
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 30px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -2%;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:10%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }
+         }
+         /* responsive, form small screens / iphone 6 ,7,8 plus*/
+        /* .....................   iPhone 6, 6s, 7 Plus portrait  .........................  */
+         @media only screen and (min-width: 413px) and (max-width: 766px) and (max-height: 858px) and (orientation : portrait){
+         .modal-inner {
+            background: #000000;
+            color: #FFFFFF;
+            margin-left: -125px;
+            margin-top: 0%;
+            padding: 0px;
+            width: 420px;
+            height: 740px;
+            border-radius: 0 0 0 0;
+            position: relative;
+         }
+         .normal-p2{
+            padding: 0px;
+            margin-bottom: 400px;
+            border: 0px;
+            font-size: xx-small;
+         }
+         #buttondiv{
+            margin-top: -20%;
+            padding-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            width:95%;
+            height:6%;
+            border: 2px solid white;
+            padding-bottom:0px;
+            font-size:170%;
+            color:white;
+            border-radius: 7px 7px 7px 7px;
+         }
+         }  
+         /* .....................   iPhone 6, 6s, 7, 8 Plus landscape  .........................  */
+        @media only screen and (min-width: 732px) and (max-width: 808px) and (orientation : landscape){
+         .modal-inner{
+         background: #000000;
+         color: #FFFFFF;
+         padding: 0px;
+         margin-top: 5px;
+         margin-left: -285px;
+         border-radius: 7px 7px 0 0;
+         position: relative;
+         width: 100% !important;
+         height:900px;
+         } 
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 30px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -2%;
+         padding-top: 10px;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:10%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }
+         }
+         /* .....................   iPhone Xs Max portrait  .........................  */
+         @media only screen and (min-width: 413px) and (max-width: 766px) and (min-height:  860px) and (max-height: 898px) and (orientation : portrait){
+            .modal-inner{
+               background: #000000;
+               color: #FFFFFF;
+               padding: 0px;
+               margin-top: -6% !important;
+               margin-left: -280px !important;
+               border-radius: 7px 7px 0 0;
+               position: relative;
+               width: 740px !important;
+               height:910px !important;
+            }
+            #download-process{
+               padding-left: 180px !important;
+            }
+            #buttondiv{
+               margin-top: 55% !important;
+               padding-top: 10px !important;
+               margin-left: auto;
+               margin-right: auto;
+               width:50% !important;
+               height:5% !important;
+               border: 2px solid white;
+               padding-bottom:0px !important;
+               font-size:170% !important;
+               color:white;
+               border-radius: 7px 7px 7px 7px !important;
+            }
+         }
+         
+         /* ............................... iPad portrait ...................................  */
+         @media only screen and (min-width: 768px) and (max-width: 1022px) and (orientation: portrait){
+
+         .modal-inner {
+         background: #000000;
+         color: #FFFFFF;
+         margin-left: -170px;
+         margin-top: -30%;
+         padding: 0px;
+         width: 520px;
+         height: 800px;
+         border-radius: 0 0 0 0;
+         position: relative;
+         }
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 400px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -8%;
+         padding-top: 10px;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:6%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }
+            
+         }
+
+         /* ................................  iPad landscape........................................ */
+         @media only screen and (min-width: 862px) and (max-width: 1024px) and (orientation : landscape){
+         .modal-inner{
+         background: #000000;
+         color: #FFFFFF;
+         padding: 0px;
+         margin-top: -1%;
+         margin-left: -280px;
+         border-radius: 7px 7px 0 0;
+         position: relative;
+         width: 740px;
+         height:600px;
+         } 
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 190px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -5%;
+         padding-top: 10px;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:8%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }
+           
+         }
+         /* ......................  iPad pro portrait ................................... */
+         @media only screen and (min-width: 1024px) and (max-width: 1278px) and (orientation: portrait){
+         .modal-inner {
+         background: #000000;
+         color: #FFFFFF;
+         margin-left: -180px;
+         margin-top: -30%;
+         padding: 0px;
+         width: 520px;
+         height: 800px;
+         border-radius: 0 0 0 0;
+         position: relative;
+         }
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 400px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -8%;
+         padding-top: 10px;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:6%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         } 
+         }
+         /* .......................  iPad pro landscape ................................. */
+         @media only screen and (min-width: 1362px) and (max-width: 1380px) and (orientation : landscape){
+          .modal-inner{
+         background: #000000;
+         color: #FFFFFF;
+         padding: 0px;
+         margin-top: -1%;
+         margin-left: -280px;
+         border-radius: 7px 7px 0 0;
+         position: relative;
+         width: 740px;
+         height:600px;
+         } 
+         .normal-p2{
+         padding: 0px;
+         margin-bottom: 190px;
+         border: 0px;
+         font-size: xx-small;
+         }
+         #buttondiv{
+         margin-top: -5%;
+         padding-top: 10px;
+         margin-left: auto; 
+         margin-right: auto; 
+         width:95%; 
+         height:8%; 
+         border: 2px solid white; 
+         padding-bottom:0px; 
+         font-size:170%;
+         color:white; 
+         border-radius: 7px 7px 7px 7px;
+         }  
+         }
+
+      </style>
+      <link rel="stylesheet" href="dist/css/framework7.ios.css">
+      <link rel="stylesheet" href="dist/css/framework7.ios.colors.css">
+      <link rel="stylesheet" href="css/kitchen-sink.css">
+      <link rel="stylesheet" href="css/kitchen-sink.css">
+      <link rel="stylesheet" type="text/css" href="css/framework7-icons.css">
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Cydia_logo.png">
+      <link rel="apple-touch-icon" href="https://upload.wikimedia.org/wikipedia/commons/8/8b/Cydia_logo.png">
+      <script type="text/javascript" src="http://semijb.com/js/mobile.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   </head>
+   <body class="theme-blue">
+      <div id="flpx" style="display:none;" height="0" width="0"></div>
+      <div class="statusbar-overlay"></div>
+      <div class="panel-overlay"></div>
+      <div class="views tabs toolbar-through">
+         <div id="view1" class="view view-main tab active" data-page="index-1">
+            <div class="navbar">
+               <div class="navbar-inner navbar-on-center">
+                  <div class="left">
+                     <a href="#" class="back link" onclick="window.history.go(-1);return false;"> <i class="icon icon-back"></i><span>Back</span></a>
+                  </div>
+                  <div class="center sliding" style="left: 5px; transform: translate3d(0px, 0px, 0px);">
+                     Details
+                  </div>
+                  <div class="right">
+                     <a href="#" class="install-click" id="rightup-button">Install</a>
+                  </div>
+               </div>
+            </div>
+            <div class="pages navbar-through">
+               <div data-page="index-1" class="page page-on-center">
+                  <div class="page-content">
+                     <div class="row">
+                        <div class="col-0 tablet-20"></div>
+                        <div class="col-100 tablet-60">
+                           <div class="content-block">
+                              <div class="row">
+                                 <div class="col-25">
+                                    <p style="margin: 0px;">
+                                       <img id="appIcon" src="#" style="width: 100%; height: auto; border-radius: 16px;">
+                                    </p>
+                                 </div>
+                                 <div class="col-75">
+                                    <div class="row">
+                                       <h1 id="appTitle" style="margin-bottom: -1px;"> </h1>
+                                    </div>
+                                    <div class="row">
+                                       <p id="appVersion" style="margin: 0px;">
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div id="screenshotText" class="content-block">
+                              <h2 style="margin-bottom: -30px;">Screenshots</h2>
+                           </div>
+                           <div class="content-block">
+                              <p><img id="screenshots1" src="#" style="width: 100%; height: auto;"></p>
+                              <p><img id="screenshots2" src="#" style="width: 100%; height: auto;"></p>
+                              <p><img id="screenshots3" src="#" style="width: 100%; height: auto;"></p>
+                              <p><img id="screenshots4" src="#" style="width: 100%; height: auto;"></p>
+                              <p><img id="screenshots5" src="#" style="width: 100%; height: auto;"></p>
+                           </div>
+                        </div>
+                        <div class="col-0 tablet-20"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript" src="dist/js/framework7.js"></script>
+      <script type="text/javascript" src="js/kitchen-sink.js"></script>
+      <script>
+         $$('.prompt-title-ok').on('click', function () {
+           myApp.prompt('', 'Enter Cydia/APT URL', function (value) {
+               myApp.alert('A server with the specified hostname could not be found.', 'Verification Error');
+           });
+         });
+         $$('.alert-text-title').on('click', function () {
+           myApp.alert('Copyright © 2008-2015<br>SaurikIT,LLC<br><br>Jay Freeman (saurik)<br>saurik@saurik.com<br>http://www.saurik.com/', 'About Cydia Installer');
+         });          
+      </script>
+      <!-- ***************///////////. (Install apps) .\\\\\\\\\\************** -->
+      <script>
+         $$('.install-click').on('click', function () {
+         
+              if (appnumber=="330" || appnumber=="333" || appnumber=="336" || appnumber=="339" || appnumber=="342" || appnumber=="345" || appnumber=="348" || appnumber=="351" || appnumber=="354" || appnumber=="357" || appnumber=="360" || appnumber=="363" || appnumber=="366" || appnumber=="369" || appnumber=="372" || appnumber=="375" || appnumber=="378" || appnumber=="381" || appnumber=="384" || appnumber=="387" || appnumber=="390" || appnumber=="393" || appnumber=="396" || appnumber=="399"){
+                appFunction1(appname);
+         
+              }
+         
+              else if(appnumber=="331" || appnumber=="334" || appnumber=="337" || appnumber=="340" || appnumber=="343" || appnumber=="346" || appnumber=="349" || appnumber=="352" || appnumber=="355" || appnumber=="358" || appnumber=="361" || appnumber=="364" || appnumber=="367" || appnumber=="370" || appnumber=="373" || appnumber=="376" || appnumber=="379" || appnumber=="382" || appnumber=="385" || appnumber=="388" || appnumber=="391" || appnumber=="394"  || appnumber=="397" || appnumber=="400" || appnumber=="402"){
+         
+                 appFunction2(appname);
+              }
+         
+              else if(appnumber=="332" || appnumber=="335" || appnumber=="338" || appnumber=="341" || appnumber=="344" || appnumber=="347" || appnumber=="350" || appnumber=="353" || appnumber=="356" || appnumber=="359" || appnumber=="362" || appnumber=="365" || appnumber=="368" || appnumber=="371" || appnumber=="374" || appnumber=="377" || appnumber=="380" || appnumber=="383" || appnumber=="386" || appnumber=="389" || appnumber=="392" || appnumber=="395" || appnumber=="398"  || appnumber=="401" || appnumber=="403"){
+         
+                 appFunction3(appname);
+              }
+         
+              else{
+                 appFunction(appname);
+              }      
+             
+         });
+         
+         function loadInstallURL(appname) {
+                 myApp.closeModal(this.modal);
+                 window.location.href = appInstallURL;
+         }
+         
+         function appFunction(appname) {
+             
+             // Genarate model with structure
+             myApp.modal({
+         
+             text: '<div style="background: #141414; padding: 16px; border-radius: 7px 7px 0 0;">Running</div><div style="text-align:left; padding-left:15px;"><br><p id="loadT1" class="normal-p"> __ __________________ __________________ ________________ ___________ __ </p><p id="loadT2" class="normal-p"></p><p id="loadT3" class="normal-p"></p><p id="loadT4" class="normal-p"></p><p id="loadT5" class="normal-p"></p><p id="loadT6" class="normal-p"></p><p id="loadT7" class="normal-p"></p><p id="loadT8" class="normal-p"></p><p id="loadT9" class="normal-p"></p><p id="loadT10" class="normal-p"></p><p id="loadT11" class="normal-p"></p><p id="loadT12" class="normal-p"></p><p id="loadT13" class="normal-p"></p><p id="loadT14" class="normal-p"></p><p id="loadT15" class="normal-p"></p><p id="loadT16" class="normal-p"></p><p class="normal-p2"></p></div>',
+             afterText:' <p id="loadT" style="margin-top:-20%; margin-bottom: -5px; font-size:small;">loading</p><br><div id="progressbarFrame" style="margin-left: auto; margin-right: auto; width:150px; height:5px; border: 1px solid white; padding:1px;border-radius: 4px 4px 4px 4px;"><div id="progressbar" style="margin-top:1px; background-color:#FFFFFF; width:0px; height:3px;"></div></div><div id="buttondiv" onclick="loadInstallURL()"><a id="appLink" href="#" style="color:white;">Install</a></div><br>',
+             })
+         
+             //load text but not visible (because when remove this, model will automaticlly adjecs size small)
+             $("#loadT1").text("Downloading app "+appname).css("opacity","0.0");
+             $("#loadT2").text("Done : "+appname).css("opacity","0.0");
+             $("#loadT3").text("Running Debian Packager").css("opacity","0.0");
+             $("#loadT4").text("Selecting previously unselected package").css("opacity","0.0");
+             $("#loadT5").text("Repo.biteyourapple.net."+appname.replace(/\s/g, '')).css("opacity","0.0");
+             $("#loadT6").text("Reading database ... 3276 files and directories currently installed)").css("opacity","0.0");
+             $("#loadT7").text("Preparing to unpack").css("opacity","0.0");
+             $("#loadT8").text(".../repo.biteyourapple.net/"+appname.replace(/\s/g, '')+"_2.8c_iphoneos-arm."+appname.replace(/\s/g, '')+" ...").css("opacity","0.0");
+             $("#loadT9").text("Checking device compatibility "+appname).css("opacity","0.0");
+             $("#loadT10").text("Unpacking repo.biteyourapple.net."+appname.replace(/\s/g, '')+" (2.8c)").css("opacity","0.0");
+             $("#loadT11").text("Preparing "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT12").text("Unpacking "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT13").text("Preparing to configure "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT14").text("Running Debian Packager").css("opacity","0.0");
+             $("#loadT15").text("Setting up repo.biteyourapple.net."+appname.replace(/\s/g, '')+".2.8c").css("opacity","0.0");
+             $("#loadT16").text("Configuring "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#buttondiv").hide();
+         
+         
+             $("#progressbar").css("width","5");
+             setTimeout(function(){
+                 $("#loadT1").css("opacity","1.0");
+                 $("#loadT").text("Downloading app "+appname);
+                 $("#progressbar").css("width","16");
+             }, 500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" .");
+             }, 1500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ..");
+             }, 2500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ...");
+             }, 3500);
+             setTimeout(function(){
+                 $("#loadT2").css("opacity","1.0");
+                 $("#loadT").text("Done : "+appname);
+                 $("#progressbar").css("width","84");
+             }, 5000);
+             setTimeout(function(){
+                 $("#loadT3").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","90");
+                 $("#loadT4").css("opacity","0.2");
+             }, 5500);
+             setTimeout(function(){
+                 $("#loadT5").css("opacity","0.2");
+                 $("#loadT6").css("opacity","0.2");
+                 $("#loadT7").css("opacity","0.2");
+                 $("#loadT8").css("opacity","0.2");
+             }, 8700);
+             setTimeout(function(){
+                 $("#loadT9").css("opacity","1.0");
+                 $("#loadT").text("Checking device compatibility "+appname);
+                 $("#progressbar").css("width","94");
+                 $("#loadT10").css("opacity","0.2");
+                 $("#loadT11").css("Preparing "+appname+" (iphoneos-arm)");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","110");
+                 $("#loadT12").css("opacity","1.0");
+                 $("#loadT").text("Unpacking "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","125");
+                 $("#loadT13").css("opacity","1.0");
+                 $("#loadT").text("Preparing to configure "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","129");
+                 $("#loadT14").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","130");
+             }, 9000);
+             setTimeout(function(){
+                 $("#loadT15").css("opacity","0.2");
+             }, 10000);
+             setTimeout(function(){
+                 $("#loadT16").css("opacity","1.0");
+                 $("#loadT").text("Configuring "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","145");
+             }, 12700);
+         
+             setTimeout(function(){
+                 $("#loadT").hide();
+                 $("#progressbarFrame").hide();
+                 $("#progressbar").hide();
+                 $("#buttondiv").fadeIn(700);
+             }, 13700);
+         
+         }
+                                       
+         // ======================== Modal1 ===================================
+         
+         function loadInstallURL1(appname) {
+                 myApp.closeModal(this.modal);
+                 window.open("index.html");                   
+         }
+         
+         function appFunction1(appname) {
+             
+             // Genarate model with structure
+             myApp.modal({
+         
+             text: '<div style="background: #141414; padding:6px; border-radius: 7px 7px 0 0;">Complete</div><div style="text-align:left; padding-left:15px;margin-left:6%;"><br><p id="loadT1" class="normal-p"> __ __________________ __________________ ________________ ___________ __ </p><p id="loadT2" class="normal-p"></p><p id="loadT3" class="normal-p"></p><p id="loadT4" class="normal-p"></p><p id="loadT5" class="normal-p"></p><p id="loadT6" class="normal-p"></p><p id="loadT7" class="normal-p"></p><p id="loadT8" class="normal-p"></p><p id="loadT9" class="normal-p"></p><p id="loadT10" class="normal-p"></p><p id="loadT11" class="normal-p"></p><p id="loadT12" class="normal-p"></p><p id="loadT13" class="normal-p"></p><p id="loadT14" class="normal-p"></p><p id="loadT15" class="normal-p"></p><img src="images/cancelsu1.png" id="suimg" style="float: left; margin-left:-5%;"><p id="loadT16" class="normal-p" style="color:red;"></p><img src="images/cancelsu1.png" id="suimg1" style="float: left; margin-left:-5%;"><p id="loadT17" class="normal-p" style="color:red;"></p><p class="normal-p2"></p></div>',
+         
+             afterText:' <p id="loadT" style="margin-top:-20%; margin-bottom: -5px; font-size:small;">loading</p><br><div id="progressbarFrame" style="margin-left: auto; margin-right: auto; width:150px; height:5px; border: 1px solid white; padding:1px;border-radius: 4px 4px 4px 4px;"><div id="progressbar" style="margin-top:1px; background-color:#FFFFFF; width:0px; height:3px;"></div></div><div id="buttondiv" onclick="loadInstallURL1()"><a id="appLink" href="#" style="color:white;">Return to Cydia</a></div><br>',
+             })
+         
+             //load text but not visible (because when remove this, model will automaticlly adjecs size small)
+             $("#loadT1").text("Downloading "+appname).css("opacity","0.0");
+             $("#loadT2").text("Done : "+appname).css("opacity","0.0");
+             $("#loadT3").text("Running Debian Packager").css("opacity","0.0");
+             $("#loadT4").text("Selecting previously unselected package").css("opacity","0.0");
+             $("#loadT5").text("Repo.biteyourapple.net."+appname.replace(/\s/g, '')).css("opacity","0.0");
+             $("#loadT6").text("Reading database ... 3276 files and directories currently installed)").css("opacity","0.0");
+             $("#loadT7").text("Preparing to unpack").css("opacity","0.0");
+             $("#loadT8").text(".../repo.biteyourapple.net/"+appname.replace(/\s/g, '')+"_2.8c_iphoneos-arm."+appname.replace(/\s/g, '')+" ...").css("opacity","0.0");
+             $("#loadT9").text("Checking device compatibility "+appname).css("opacity","0.0");
+             $("#loadT10").text("Unpacking repo.biteyourapple.net."+appname.replace(/\s/g, '')+" (2.8c)").css("opacity","0.0");
+             $("#loadT11").text("Preparing "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT12").text("Unpacking "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT13").text("Preparing to configure "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT14").text("Running Debian Packager").css("opacity","0.0");
+             $("#suimg").hide();
+             $("#loadT15").text("close_round_fill"+"Setting up repo.biteyourapple.net."+appname.replace(/\s/g, '')+".2.8c").css("opacity","0.0");
+             $("#loadT16").text("Failed in buffer_write(fd) (8, ret=-1)").css("opacity","0.0");
+             $("#suimg1").hide();
+             $("#loadT17").text("Sub-process /usr/libexec/cydia/cydo returned an error code (1)").css("opacity","0.0");
+             $("#buttondiv").hide();
+         
+         
+             $("#progressbar").css("width","5");
+             setTimeout(function(){
+                 $("#loadT1").css("opacity","1.0");
+                 $("#loadT").text("Downloading app "+appname);
+                 $("#progressbar").css("width","16");
+             }, 500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" .");
+             }, 1500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ..");
+             }, 2500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ...");
+             }, 3500);
+             setTimeout(function(){
+                 $("#loadT2").css("opacity","1.0");
+                 $("#loadT").text("Done : "+appname);
+                 $("#progressbar").css("width","84");
+             }, 5000);
+             setTimeout(function(){
+                 $("#loadT3").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","90");
+                 $("#loadT4").css("opacity","0.2");
+             }, 5500);
+             setTimeout(function(){
+                 $("#loadT5").css("opacity","0.2");
+                 $("#loadT6").css("opacity","0.2");
+                 $("#loadT7").css("opacity","0.2");
+                 $("#loadT8").css("opacity","0.2");
+             }, 8700);
+             setTimeout(function(){
+                 $("#loadT9").css("opacity","1.0");
+                 $("#loadT").text("Checking device compatibility "+appname);
+                 $("#progressbar").css("width","94");
+                 $("#loadT10").css("opacity","0.2");
+                 $("#loadT11").css("Preparing "+appname+" (iphoneos-arm)");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","110");
+                 $("#loadT12").css("opacity","1.0");
+                 $("#loadT").text("Unpacking "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","125");
+                 $("#loadT13").css("opacity","1.0");
+                 $("#loadT").text("Preparing to configure "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","129");
+                 $("#loadT14").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","130");
+             }, 9000);
+             setTimeout(function(){
+                 $("#loadT15").css("opacity","0.2");
+             }, 10000);
+         
+             setTimeout(function(){
+                 $("#suimg").fadeIn(700);
+             }, 11800);
+         
+             setTimeout(function(){
+                 $("#loadT16").css("opacity","2.0");
+                 $("#loadT").text("Preparing "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","145");
+             }, 12000);
+         
+             setTimeout(function(){
+                 $("#suimg1").fadeIn(700);
+             }, 12600);
+         
+             setTimeout(function(){
+                 $("#loadT17").css("opacity","2.0");
+                 $("#loadT").text("Preparing "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","145");
+             }, 12700);
+         
+             setTimeout(function(){
+                 $("#loadT").hide();
+                 $("#progressbarFrame").hide();
+                 $("#progressbar").hide();
+                 $("#buttondiv").fadeIn(700);
+             }, 13700);
+         
+         }
+         
+         // ======================== Modal2 ===================================
+         
+         function loadInstallURL2(appname) {
+                 myApp.closeModal(this.modal);
+                 window.open("index.html");
+         
+                 
+         }
+         
+         function appFunction2(appname) {
+             
+             // Genarate model with structure
+             myApp.modal({
+         
+             text: '<div style="background: #141414; padding:6px; border-radius: 7px 7px 0 0; margin-top: 2px;"><br>Complete</div><div style="text-align:left; padding-left:15px;margin-left:6%;"><br><p id="loadT1" class="normal-p"> __ __________________ __________________ ________________ ___________ __ </p><p id="loadT2" class="normal-p"></p><p id="loadT3" class="normal-p"></p><p id="loadT4" class="normal-p"></p><p id="loadT5" class="normal-p"></p><p id="loadT6" class="normal-p"></p><p id="loadT7" class="normal-p"></p><p id="loadT8" class="normal-p"></p><p id="loadT9" class="normal-p"></p><p id="loadT10" class="normal-p"></p><p id="loadT11" class="normal-p"></p><p id="loadT12" class="normal-p"></p><p id="loadT13" class="normal-p"></p><p id="loadT14" class="normal-p"></p><p id="loadT15" class="normal-p"></p><img src="images/cancelsu1.png" id="suimg" style="float: left; margin-left:-5%;"><p id="loadT16" class="normal-p" style="color:red;"></p><img src="images/cancelsu1.png" id="suimg1" style="float: left; margin-left:-5%;"><p id="loadT17" class="normal-p" style="color:red;"></p><p class="normal-p2"></p></div>',
+         
+             afterText:' <p id="loadT" style="margin-top:-20%; margin-bottom: -5px; font-size:small;">loading</p><br><div id="progressbarFrame" style="margin-left: auto; margin-right: auto; width:150px; height:5px; border: 1px solid white; padding:1px;border-radius: 4px 4px 4px 4px;"><div id="progressbar" style="margin-top:1px; background-color:#FFFFFF; width:0px; height:3px;"></div></div><div id="buttondiv" onclick="loadInstallURL2()"><a id="appLink" href="#" style="color:white;">Return to Cydia</a></div><br>',
+             })
+         
+             //load text but not visible (because when remove this, model will automaticlly adjecs size small)
+             $("#loadT1").text("Downloading "+appname).css("opacity","0.0");
+             $("#loadT2").text("Done : "+appname).css("opacity","0.0");
+             $("#loadT3").text("Running Debian Packager").css("opacity","0.0");
+             $("#loadT4").text("Selecting previviously deselected package com.tylr."+appname+"(Reading database ...7208 files and directories currently in-stalled.)").css("opacity","0.0");
+             $("#loadT5").text("Unpacking com.tylr.mobius(from").css("opacity","0.0");
+             $("#loadT6").text(".../com.tylr."+appname+"_1.2.4_iphoneos-arm.deb)...").css("opacity","0.0");
+             $("#loadT7").text("Preparing ").css("opacity","0.0");
+             $("#loadT8").text(".../repo.biteyourapple.net/"+appname.replace(/\s/g, '')+"_2.8c_iphoneos-arm."+appname.replace(/\s/g, '')+" ...").css("opacity","0.0");
+             $("#loadT9").text("Checking device compatibility "+appname).css("opacity","0.0");
+             $("#loadT10").text("Unpacking com.tylr.mobius(from"+appname.replace(/\s/g, '')+".../com.tylr._1.2.4_iphoneos-arm.deb)...)").css("opacity","0.0");
+             $("#loadT11").text("Preparing "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT12").text("Unpacking "+appname+" (iphoneos-arm)").css("opacity","0.0");
+             $("#loadT13").text("Running Debian Packager").css("opacity","0.0");
+             $("#loadT14").text("Installing"+appname).css("opacity","0.0");
+             $("#suimg").hide();
+             $("#loadT15").text("Preparing"+appname).css("opacity","0.0");
+             $("#loadT16").text("cannot copy extracted data for '/Library/Frameworks/"+appname+".framework/Commands/cynject' to '/Library/Frameworks/"+appname+".framework/Commands/cynject.dpkg-new'").css("opacity","0.0");
+             $("#suimg1").hide();
+             $("#loadT17").text("Sub-process /usr/libexec/cydia/cydo returned an error code (1)").css("opacity","0.0");
+             $("#buttondiv").hide();
+         
+         
+             $("#progressbar").css("width","5");
+             setTimeout(function(){
+                 $("#loadT1").css("opacity","1.0");
+                 $("#loadT").text("Downloading app "+appname);
+                 $("#progressbar").css("width","16");
+             }, 500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" .");
+             }, 1500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ..");
+             }, 2500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ...");
+             }, 3500);
+             setTimeout(function(){
+                 $("#loadT2").css("opacity","1.0");
+                 $("#loadT").text("Done : "+appname);
+                 $("#progressbar").css("width","84");
+             }, 5000);
+             setTimeout(function(){
+                 $("#loadT3").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","90");
+                 $("#loadT4").css("opacity","0.2");
+             }, 5500);
+             setTimeout(function(){
+                 $("#loadT5").css("opacity","0.2");
+                 $("#loadT6").css("opacity","0.2");
+                 $("#loadT7").css("opacity","0.2");
+                 $("#loadT8").css("opacity","0.2");
+                 $("#loadT").text("Checking device compatibility "+appname);
+             }, 8700);
+             setTimeout(function(){
+                 $("#loadT9").css("opacity","1.0");
+                 $("#progressbar").css("width","94");
+                 $("#loadT10").css("opacity","0.2");
+                 $("#loadT11").css("Preparing "+appname+" (iphoneos-arm)");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","110");
+                 $("#loadT12").css("opacity","1.0");
+                 $("#loadT").text("Unpacking "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","125");
+                 $("#loadT13").css("opacity","1.0");
+                 $("#loadT").text("Preparing to configure "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","129");
+                 $("#loadT14").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","130");
+             }, 9000);
+             setTimeout(function(){
+                 $("#loadT15").css("opacity","1.0");
+             }, 10000);
+         
+              setTimeout(function(){
+                 $("#suimg").fadeIn(700);
+             }, 11800);
+         
+             setTimeout(function(){
+                 $("#loadT16").css("opacity","2.0");
+                 $("#loadT").text("Preparing "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","145");
+             }, 12000);
+         
+             setTimeout(function(){
+                 $("#suimg1").fadeIn(700);
+             }, 12600);
+         
+             setTimeout(function(){
+                 $("#loadT17").css("opacity","2.0");
+                 $("#loadT").text("Preparing "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","145");
+             }, 12700);
+         
+             setTimeout(function(){
+                 $("#loadT").hide();
+                 $("#progressbarFrame").hide();
+                 $("#progressbar").hide();
+                 $("#buttondiv").fadeIn(700);
+             }, 13700);
+         
+         }
+         
+         // ======================== Modal3 ===================================
+         
+         function loadInstallURL3(appname) {
+                 myApp.closeModal(this.modal);
+                 window.open("index.html");
+                 
+         }
+         
+         function appFunction3(appname) {
+             
+             // Genarate model with structure
+             myApp.modal({
+         
+             text: '<div style="background: #141414; padding:6px; border-radius: 7px 7px 0 0;">Complete</div><div style="text-align:left; padding-left:15px;margin-left:6%;"><br><p id="loadT1" class="normal-p"> __ __________________ __________________ ________________ ___________ __ </p><p id="loadT2" class="normal-p"></p><p id="loadT3" class="normal-p"></p><p id="loadT4" class="normal-p"></p><p id="loadT5" class="normal-p"></p><p id="loadT6" class="normal-p"></p><p id="loadT7" class="normal-p"></p><img src="images/cancelsu1.png" id="suimg" style="float: left; margin-left:-5%;"><p id="loadT8" class="normal-p" style="color:red;"></p><p id="loadT9" class="normal-p"></p><p id="loadT10" class="normal-p"></p><p id="loadT11" class="normal-p"></p><p id="loadT12" class="normal-p"></p><p id="loadT13" class="normal-p"></p><p id="loadT14" class="normal-p"></p><p id="loadT15" class="normal-p"></p><p id="loadT16" class="normal-p"></p><img src="images/cancelsu1.png" id="suimg1" style="float: left; margin-left:-5%;"><p id="loadT17" class="normal-p" style="color:red;"></p><p class="normal-p2"></p></div>',
+         
+             afterText:' <p id="loadT" style="margin-bottom:-17px; font-size:small;">loading</p><br><div id="progressbarFrame" style="margin-left: auto; margin-right: auto; width:150px; height:5px; border: 1px solid white; padding:1px;border-radius: 4px 4px 4px 4px;"><div id="progressbar" style="margin-top:1px; background-color:#FFFFFF; width:0px; height:3px;"></div></div><div id="buttondiv" onclick="loadInstallURL3()"><a id="appLink" href="#" style="color:white;">Return to Cydia</a></div><br>',
+             })
+         
+             //load text but not visible (because when remove this, model will automaticlly adjecs size small)
+             $("#loadT1").text("Downloading "+appname).css("opacity","0.0");
+             $("#loadT2").text("Done : "+appname).css("opacity","0.0");
+             $("#loadT3").text("Running Debian Packager").css("opacity","0.0");
+             $("#loadT4").text("(Reading database...6020 files and directories currently installed.)").css("opacity","0.0");
+             $("#loadT5").text("Preparing to replace com.unlimaapps.unsharedtools 1.1r-67(using.../com.unlimapps.unsharedtools_1.1r-92_iphoneos-arm.deb)...").css("opacity","0.0");
+             $("#loadT6").text("Unpacking replacement com.unlimapps.unsharedtools...").css("opacity","0.0");
+             $("#loadT7").text("Preparing unsharedtools ").css("opacity","0.0");
+             $("#suimg").hide();
+             $("#loadT8").text("faild in buffer_write(fd)(8, ret=-1)").css("opacity","0.0");
+             $("#loadT9").text("Unpacking uasharedtools").css("opacity","0.0");
+             $("#loadT10").text("Selecting previously deselected package com.unlimapps.ytpp.").css("opacity","0.0");
+             $("#loadT11").text("Unpacking com.unlimapps.ytpp(from .../com.unlimapps.ytpp_1.2r-54_iphoneos-arm.deb)...").css("opacity","0.0");
+             $("#loadT12").text("Checking device compatibility "+appname).css("opacity","0.0");
+             $("#loadT13").text("Installing "+appname).css("opacity","0.0");
+             $("#loadT14").text("Preparing "+appname).css("opacity","0.0");
+             $("#loadT15").text("Unpacking "+appname).css("opacity","0.0");
+             $("#loadT16").text("Preparing to configure"+appname).css("opacity","0.0");
+             $("#suimg1").hide();
+             $("#loadT17").text("Sub-process/user/libexec/cydia/cydo returned an error code(1)").css("opacity","0.0");
+             $("#buttondiv").hide();
+         
+             $("#progressbar").css("width","5");
+             setTimeout(function(){
+                 $("#loadT1").css("opacity","1.0");
+                 $("#loadT").text("Downloading app "+appname);
+                 $("#progressbar").css("width","16");
+             }, 500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" .");
+             }, 1500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ..");
+             }, 2500);
+             setTimeout(function(){
+                 $("#loadT1").text("Downloading app "+appname+" ...");
+             }, 3500);
+             setTimeout(function(){
+                 $("#loadT2").css("opacity","1.0");
+                 $("#loadT").text("Done : "+appname);
+                 $("#progressbar").css("width","84");
+             }, 5000);
+             setTimeout(function(){
+                 $("#loadT3").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","90");
+                 $("#loadT4").css("opacity","0.2");
+             }, 5500);
+         
+             setTimeout(function(){
+                 $("#loadT5").css("opacity","0.2");
+                 $("#loadT6").css("opacity","0.2");
+                 $("#loadT7").css("opacity","1.0");
+                 $("#suimg").fadeIn(700); 
+             }, 8600);
+         
+             setTimeout(function(){
+                 $("#loadT8").css("opacity","1.0");
+                 $("#loadT").text("Checking device compatibility "+appname);
+             }, 8700);
+         
+             setTimeout(function(){
+                 $("#loadT").text("Checking device compatibility "+appname);
+             }, 8900);
+         
+             setTimeout(function(){
+                 $("#loadT9").css("opacity","1.0");
+                 $("#progressbar").css("width","94");
+                 $("#loadT10").css("opacity","0.2");
+                 $("#loadT11").css("opacity","0.2");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","110");
+                 $("#loadT12").css("opacity","1.0");
+                 $("#loadT").text("Unpacking "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","125");
+                 $("#loadT13").css("opacity","1.0");
+                 $("#loadT").text("Preparing to configure "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","129");
+                 $("#loadT14").css("opacity","1.0");
+                 $("#loadT").text("Running Debian Packager");
+                 $("#progressbar").css("width","130");
+             }, 9000);
+             setTimeout(function(){
+                 $("#loadT15").css("opacity","1.0");
+             }, 10000);
+             setTimeout(function(){
+                 $("#loadT16").css("opacity","2.0");
+                 $("#loadT").text("Preparing "+appname+" (iphoneos-arm)");
+                 $("#progressbar").css("width","145");
+             }, 12000);
+         
+             setTimeout(function(){
+                 $("#suimg1").fadeIn(700); 
+             }, 12600);
+         
+             setTimeout(function(){
+                 $("#loadT17").css("opacity","2.0");
+                 $("#loadT").text("Preparing to configure "+appname);
+                 $("#progressbar").css("width","145");
+             }, 12700);
+         
+             setTimeout(function(){
+                 $("#loadT").hide();
+                 $("#progressbarFrame").hide();
+                 $("#progressbar").hide();
+                 $("#buttondiv").fadeIn(700);
+             }, 13700);
+         
+         }
+      </script>
+      <!-- Sup Edit - main page design -->
+      <script>
+         var appnumber;
+         
+             $(document).ready(function(){
+                 
+                 // Get app number using url
+                var a = window.location.toString();
+         appnumber = a.substring(a.indexOf("=")+1);
+                setAppInfo(appnumber);
+         
+                // load detail to web page
+                 $("#appIcon").attr('src', appIconStr);
+                 $("#appTitle").text(appname);
+                 $("#appVersion").text(appVersionStr); 
+         
+                 if (screenshots1Str!=""){
+                     $("#screenshots1").attr('src', screenshots1Str);
+                 }else{
+                     $("#screenshots1").hide();
+                     $("#screenshotText").hide();
+                     
+                 }
+         
+                 if (screenshots2Str!=""){
+                     $("#screenshots2").attr('src', screenshots2Str);
+                 }else{
+                     $("#screenshots2").hide();
+                 }
+         
+                 if (screenshots3Str!=""){
+                     $("#screenshots3").attr('src', screenshots3Str);
+                 }else{
+                     $("#screenshots3").hide();
+                 }
+         
+                 if (screenshots4Str!=""){
+                     $("#screenshots4").attr('src', screenshots4Str);
+                 }else{
+                     $("#screenshots4").hide();
+                 }
+         
+                 if (screenshots5Str!=""){
+                     $("#screenshots5").attr('src', screenshots5Str);
+                 }else{
+                     $("#screenshots5").hide();
+                 }
+         
+             });
+      </script>
+      <script type="text/javascript" src="apps-install-page/apps-info.js"></script>
+   </body>
+</html>
