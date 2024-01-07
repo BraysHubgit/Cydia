@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner navbar-on-center">
+                        <div class="left">
+                            <a href="#" onclick="myFunction()" class="">Back</a>
+                        </div>
+                        <script>
+                                function myFunction() {
+                                location.reload();
+                                }
+                        </script>
+                        <div class="center sliding" style="left: 5px; transform: translate3d(0px, 0px, 0px);">
+                            Login
+                        </div>
+                        <!-- <div class="right">
+                            <a href="#" class="">Reload</a>
+                            <script>
+                                function myFunction() {
+                                location.reload();
+                                }
+                            </script>
+                        </div> -->
+                    </div>
+          <!-- Navbar inner for About page-->
+          <div data-page="about" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">About Us</div>
+          </div>
+          <!-- Navbar inner for Services page-->
+          <div data-page="services" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Services</div>
+          </div>
+          <!-- Navbar inner for Form page-->
+          <div data-page="form" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Form</div>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Index Page-->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <!-- <div class="content-block-title">Welcome To My Awesome App</div> -->
+              <div class="content-block" style="margin-top: 10px; margin-bottom: 10px; height: 76px; width: 93%; margin-left: auto; margin-right: auto; background: #e2e2e2;">
+                                                                                                                                     
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Cydia_logo.png" style="width: 60px;height: 60px;border-radius:21%;float:left;margin-right:10px;margin-left: 10px;padding-top: 5px;" class="">
+                                <!-- <center style="
+                                    height: 80px;
+                                    "> -->
+                                    <!-- <p>hvgsgvisdhvis</p> -->
+                                    <font size="4">
+                                        <div class="story-info" style="padding-top: 25px; color:#000;">Jailbreak Account</div>                                                                               
+                                    </font>
+                                    
+                                <!-- </center> -->
+                            </div>
+                            
+                <div class="content-block-inner" style="width: 85%; margin-left: auto; margin-right: auto;">
+                  <p>You must Jailbreak your device to get fully functional Cydia.</p>
+                  <p>Use the following details to login zJailbreak account to download Jailbreak tools and get premium class Jailbreak support for free</p>
+                </div>
+
+                <div class="content-block-inner" style="width: 85%; margin-left: auto; margin-right: auto;">
+                  <center><p style="font-size: 16px;">Login URL <a href="#" onclick="parent.location='http://zjailbreak.com/account'">http://zjailbreak.com/account</a></p>
+                  <!-- <p>User Name : <span style="color: blue;">user311111</span></p>
+                  <p>Password : <span style="color: blue;">asd1212</span></p> --></center>
+                  <br/>
+                  <center><p><a href="mailto:zjailbreakhelp@gmail.com" style="color:blue;">Contact support for more information.</a>
+
+                  <!-- <a href="#" onclick="parent.location='http://member.com/'">Contact support for more information.</a> --></p></center>
+                </div>
+              </div>
+              <div class="content-block-title">What about simple navigation?</div>
+              <div class="list-block">
+                <ul>    
+                  <li><a href="#about" class="item-link">
+                      <div class="item-content">
+                        <div class="item-inner"> 
+                          <div class="item-title">About</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#services" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Services</div>
+                        </div>
+                      </div></a></li>
+                  <li><a href="#form" class="item-link">
+                      <div class="item-content"> 
+                        <div class="item-inner">
+                          <div class="item-title">Form</div>
+                        </div>
+                      </div></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <!-- <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>

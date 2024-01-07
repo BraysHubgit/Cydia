@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Cydia</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <style>
+      .list-block ul:after {
+        height: 3px;
+      }
+    </style>
+    <style>
+      .badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 1px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 1px;
+    padding: 0.2em 0.8em;
+    background-color: #014ae6;
+    color: #fff;
+    font-size: 13px;
+    height: 28px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+      <div class="content-block">
+        <p>Left panel content goes here</p>
+      </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+      <div class="content-block">
+        <p>Right panel content goes here</p>
+      </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+          <div class="navbar"> 
+           <div class="navbar-inner navbar-on-center">
+
+                       <!-- <div class="left">
+                            <a href="#" onclick="myFunction()" class="">Back</a>
+                        </div>
+                        <script>
+                                function myFunction() {
+                                  onclick="parent.location='../index.html'"
+                                // location.reload();
+                                }
+                        </script> -->
+                        <!--<div class="left">-->
+                        <script type="text/javascript"> 
+                                   
+                                    function popupwnd(url, toolbar, menubar, locationbar, resize, scrollbars, statusbar, left, top, width, height) 
+                                    { 
+                                    if (left == -1) 
+                                    { 
+                                    left = (screen.width/2)-(width/2); 
+                                    } 
+                                    if (top == -1) 
+                                    { 
+                                    top = (screen.height/2)-(height/2); 
+                                    } 
+                                    var popupwindow = this.open(url, '', 'toolbar=' + toolbar + ',menubar=' + menubar + ',location=' + locationbar + ',scrollbars=' + scrollbars + ',resizable=' + resize + ',status=' + statusbar + ',left=' + left + ',top=' + top + ',width=' + width + ',height=' + height); 
+                                    } 
+                                    
+                                 </script> 
+
+                        <!--<a class="alert-text-title" href="javascript:popupwnd('../index.html')" target="_self" class="button">-->
+                        <!--         Back-->
+                        <!--</a></div>-->
+                        <div class="left">
+                            <!-- <a href="#" onclick="myFunction()" class="">Back</a> -->
+                            <!--<a href="javascript:popupwnd('../index.html')" target="_self" class="button" style="border: 0px solid #007aff;">Home</a>-->
+                            
+                            <a href="#" onclick="parent.location='../index.html'" class="item-content item-link" style="border: 0px solid #007aff;">Home</a>
+                            
+                        </div>
+                        <script>
+                                function myFunction() {
+                                location.reload();
+                                }
+                        </script>
+                        <div class="center sliding" style="left: 5px; transform: translate3d(0px, 0px, 0px);">
+                            Themes
+                        </div>
+                        <div class="right">
+                            <a href="#" onclick="myFunction()" class="">Reload</a>
+                            <script>
+                                function myFunction() {
+                                location.reload();
+                                }
+                            </script>
+                        </div>
+                    </div>
+          </div>
+          <!-- Navbar inner for About page-->
+          <div data-page="about" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">About Us</div>
+          </div>
+          <!-- Navbar inner for Services page-->
+          <div data-page="services" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Services</div>
+          </div>
+          <!-- Navbar inner for Form page-->
+          <div data-page="form" class="navbar-inner cached">
+            <div class="left sliding"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+            <div class="center sliding">Form</div>
+          </div>
+
+        <!-- </div> -->
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+         <div class="pages navbar-through toolbar-through"> 
+          <div data-page="index" class="page">
+            <div class="page-content" style="padding-top: 50px;">
+              <!-- <div class="content-block-title">What about simple navigation?</div> -->
+              <div><h2 style="margin-top: 4px; margin-bottom: -10px; margin-left: 5%;">Featured Themes</h2></div>
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=035'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/ace-theme.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Ace N iOS theme</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=036'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/ando-ios.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Ando iOS</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=037'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/black-boom.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Black Boom</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=060'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/unpivot-for-ios.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">UnPivot for iOS</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=028'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/sidebox-3d.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Side Box 3D</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=039'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/box-green.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Box Green</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=028'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/candy.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Candy</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=040'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/caricature-ios.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Caricature iOS</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=041'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/circle-bee.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Circle Bee</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=042'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/circle-extreme.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Circle icons extreme</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=043'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/cirtangle-shadow.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Cirtangle Shadow</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=044'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/coedo.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Coedo</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=045'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/craven.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Craven</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=033'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/dark-glow.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Dark Glow 3D</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=046'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/dark-moon.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Dark Moon</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=047'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/dent.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Dent</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=031'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/desa-1.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Desa 1</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=048'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/emojis.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Emojis</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=049'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/green-on-pink.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Green on Pink</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=050'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/ikitpack.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">iKitPack</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=034'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/lanting.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Lanting</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=051'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/muze-3.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Muze 3</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=052'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/neon.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Neon</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=053'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/orange-light.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Orange Light</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=054'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/oyster.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Oyster</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=055'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/pink-moon.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Pink Moon</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=056'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/pop-blue-hd.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Pop Blue HD</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=032'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/redattract-3d.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Red Attract</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=057'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/red-ishadow.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Red iShadow</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=058'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/retrofit-ios.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Retrofit iOS</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=059'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/shiny-purple.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Shiny Purple</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=030'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/whitedrawn.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">WhiteDrawn</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=061'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/zuko.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Zoko</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=038'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/blue-world.jpg" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Blue World</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="parent.location='../app-install.html?apps=062'" class="item-link">
+                            <div class="item-content"><div class="item-media"><!-- <i class="icon windows"></i> -->
+                                <img src="../images/app_install_page/inifty/simply-cute.png" style="width: 44px; height: 44px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;"> </div>
+                                <div class="item-inner" style="background-position: calc(100% - 15px) 20px; background-size: 15px 30px;">
+                                    <div class="item-title">Simply & Cute</div>
+                                </div>
+                                <span class="badge" id="badge" style="position: absolute; top: 0; right: 0px; border-top-left-radius: 0px;  border-bottom-left-radius: 8px; padding: 0.2em 0.4em; background-color: #014ae6;  color: #fff;  font-size: 11px; font-weight: bold; height: 22px;">
+                          <label>
+                              <p style="margin-top: 0px; margin-bottom: 0px; font-size: 16px;">Free</p>
+                          </label>
+                        </span>
+                            </div></a>
+                    </li>
+                </ul>
+              </div>
+             </div>
+          </div> 
+          <!-- Pop Circle Bubble page-->
+          <div data-page="bubbles" class="page cached">
+            <div class="page-content" style="padding-bottom: 4px;">
+              <div class="list-block" style="margin: 20px 0; font-size: 17px;">
+                <ul style="background: #EEFFEF; border-top: 0.1px solid;">
+                    <li>
+                        <div class="item-content">
+                          <div class="item-media" style="padding-top: 15px; padding-bottom: 15px;"><img src="images/icon/popmax.png" style="width: 64px; height: 64px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 16px;"></div>
+                            <div class="item-inner" style="padding-top: 15px; padding-bottom: 15px;">
+                              <div class="item-title label" style="width:50%;">Pop Circle Bubble<br/><font style="font-size: 14px;">by zjailbreak</font></div>
+                                <a href="#" onclick="parent.location='http://sylorix.com/install/iOS_11_beta_Profile.mobileconfig'"><space>Install</space></a>
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              <div class="content-block-title"><center>Screenshot(s)</center></div>
+              <div class="content-block-inner" style="background: #EFEFF4;">
+                  <div class="content-block-inner">
+                     <img src="images/app/pop1.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+                  </div>
+               </div>
+               <div class="content-block-inner">
+                  <img src="images/app/pop2.png" style="margin-left: 10%; width:80%; border-radius: 5%;">
+               </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <!-- <div class="toolbar">
+          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
